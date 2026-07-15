@@ -7,7 +7,7 @@ import {
   useNavigation,
   NavigationProp
 } from '@react-navigation/native';
-
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 
 const wins = [
   [0,1,2],
@@ -249,7 +249,7 @@ type RootStackParamList = {
 
 const TicTacToeAi = () => {
 
-  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+  const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   const [board, setBoard] = useState(
       Array(9).fill(null)
@@ -323,7 +323,7 @@ const TicTacToeAi = () => {
 
         <Pressable
             style={styles.navButton}
-            onPress={() => navigation.navigate('vsPlayer')}
+            onPress={() => navigation.pop()}
         >
             <Text style={styles.navButtonText}>
                 Play with Player
