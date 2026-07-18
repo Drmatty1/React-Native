@@ -66,6 +66,9 @@ yarn-error.log
 # testing
 /coverage
 
+# VS Code Java language-server classpath helpers
+.vscode/java-libs/
+
 # Yarn
 .yarn/*
 !.yarn/patches
